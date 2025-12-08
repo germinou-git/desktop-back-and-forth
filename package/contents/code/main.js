@@ -105,7 +105,10 @@ function moveActiveWindowToDesktopBackAndForth(targetDesktopName) {
 function tryGetPreviouslyActiveWindow(currentDesktop) {
     // The stack of windows is ordered from older to newer
     for (var i = workspace.stackingOrder.length - 1; i >= 0; i--) {
-        if (workspace.stackingOrder[i].desktops.includes(currentDesktop)) {
+        if (
+            workspace.stackingOrder[i].desktops.includes(currentDesktop)
+            && !workspace.stackingOrder[i].minimized
+        ) {
             return workspace.stackingOrder[i];
         }
     }
