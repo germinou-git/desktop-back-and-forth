@@ -6,12 +6,10 @@
 //
 //  - It works on a range of at most 10 Virtual Desktops,
 //    named '1,2,3,..,9,10'.
-
 var previousDesktopName = workspace.desktop;
 
 workspace.currentDesktopChanged.connect(desktop => {
     previousDesktopName = desktop.name;
-
     // Deletes desktop if it is empty.
     // Empty desktops can be an eye sore for users of the Pager widget.
     // Users who need them can safely delete this code.
@@ -19,6 +17,14 @@ workspace.currentDesktopChanged.connect(desktop => {
         workspace.removeDesktop(desktop);
     }
     //
+});
+
+// Fixes issue where, after reboot, the starting desktop isn't always 1
+switchToDesktop("1");
+workspace.desktops.forEach((desktop) => {
+    if (isDesktopEmpty(desktop) && desktop != workspace.currentDesktop) {
+        workspace.removeDesktop(desktop);
+    }
 });
 
 // Empty of so-called "Normal" windows.

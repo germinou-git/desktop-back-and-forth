@@ -33,7 +33,7 @@ The shortcuts can be modified in Plasma's System Settings application, in 'Keybo
   - Default is `Meta+Shift+i`.
   - Creates Virtual Desktop i if it does not exist and
     - moves the currently active window to Desktop i from another Virtual Desktop **or**,
-    - from Virtual Desktop i, moves the currenctly active window to the previously active Virtual Desktop.
+    - from Virtual Desktop i, moves the currently active window to the previously active Virtual Desktop.
 
 As noted above, this script creates the target Virtual Desktop if it does not exist.
 Similarly, it deletes empty desktops upon leaving them. This is convenient for users of Plasma's Pager widget, which does not offer the option to hide empty Virtual Desktops from the view.
