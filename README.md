@@ -13,7 +13,7 @@ This script is intended for users of Plasma's KWin 6. It allows to:
 ## Installation
 - From the directory where you want to install, run
    ```
-     git clone https://github.com/stephane-coulomb/desktop-back-and-forth.git
+     git clone https://github.com/germinou-git/desktop-back-and-forth.git
    ```
 - then run
    ```
