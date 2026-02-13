@@ -12,7 +12,7 @@
         "Id": "desktop-back-and-forth",
         "Version": "1.2",
         "License": "GPL-2.0+",
-        "Website": "https://github.com/stephane-coulomb/desktop-back-and-forth"
+        "Website": "https://github.com/germinou-git/desktop-back-and-forth"
     },
     "X-Plasma-API": "javascript",
     "X-Plasma-MainScript": "code/main.js",
